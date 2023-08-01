@@ -1,0 +1,132 @@
+.no-scroll {
+    overflow-y: hidden;
+}
+
+
+.wrapp-modal {
+    position: relative;
+    z-index: 20;
+}
+
+.fade-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(220, 225, 226, 0.679);
+
+}
+
+.modal-window {
+    @include _280 {
+        width: 200px;
+        z-index: 18;
+        animation-duration: 3s;
+        animation-name: move-right;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        position: absolute;
+        overflow-y: auto;
+        background: #086266;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    @include _320 {
+        width: 250px;
+        top: 65%;
+    }
+
+    @include _480 {
+        width: 350px;
+        top: 65%;
+    }
+
+
+    @include _768 {
+        flex-direction: row;
+        width: 583px;
+        top: 50%;
+
+    }
+}
+
+.modal-window__wrapp {
+    @include _280 {
+        width: 180px;
+    }
+
+    @include _320 {
+        width: 185px;
+    }
+
+    @include _480 {
+        width: 200px;
+    }
+
+    @include _768 {
+        margin-left: 15px;
+        width: 300px;
+    }
+
+}
+
+.title-name {
+    color: #e6c300;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.slideInDown {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@keyframes slideInDown {
+    from {
+        top: -20px;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+    }
+
+    to {
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    top: 50%;
+
+    @include _320 {
+        top: 55%;
+    }
+
+    @include _480 {
+        top: 65%;
+    }
+
+
+    @include _768 {
+        top: 50%;
+
+    }
+
+    transform: translate(-50%, -50%);
+}

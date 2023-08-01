@@ -1,0 +1,64 @@
+@import "mixin.scss";
+
+
+
+ .wrapp-list, .list-page{
+
+    display: grid;
+     grid-template-columns: repeat(1,1fr);
+     gap: 12px;
+  
+
+     @include _768 {
+         grid-template-columns: repeat(2,1fr);
+         
+        }
+        @include _940 {
+            gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+        }
+        @include _1140 {
+            gap: 18px;
+            grid-template-columns: repeat(4,1fr);
+            
+        }
+        @include _1380 {
+            grid-template-columns: repeat(5,1fr);
+          
+         }
+
+
+
+  }
+
+
+
+
+.card {
+    width: 255px;
+    padding: 5px;
+    background-color: #086266;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  
+  
+  .card-title{
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+  }
+  
+  .card-img {
+      width: 240px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 5px;
+  
+  }
+  
+  
